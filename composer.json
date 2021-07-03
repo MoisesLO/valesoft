@@ -1,0 +1,14 @@
+{
+    "name": "moises/boilerplate",
+    "autoload": {
+        "psr-4": {
+            "App\\": "./app",
+            "Core\\": "./core"
+        }
+    },
+    "require": {
+        "izniburak/router": "^2.3",
+        "bref/bref": "^1.2",
+        "aws/aws-sdk-php": "^3.185"
+    }
+}
