@@ -5,6 +5,16 @@
 <script>
     const store = new Vuex.Store({
         state: {
+          user: {
+            nombres: "",
+            apellidos: "",
+            correo: "",            
+          }
+          empresa: {
+            ruc: "",
+            razon: "",
+            
+          },
           nombres: "Abraham Moises",
           apellidos: "",
           count: 1
