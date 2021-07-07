@@ -6,7 +6,7 @@ ini_set('display_errors', 1);
 require __DIR__ . '/vendor/autoload.php';
 
 // Conexion
-require __DIR__ . '/app/config/conn.php';
+// require __DIR__ . '/app/config/conn.php';
 
 $app = new \Core\Bootstrap();
 
