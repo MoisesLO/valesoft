@@ -8,12 +8,13 @@
           user: {
             nombres: "",
             apellidos: "",
-            correo: "",            
-          }
+            correo: "",
+            status: "no conectado"
+          },
           empresa: {
             ruc: "",
             razon: "",
-            
+            direccion: ""            
           },
           nombres: "Abraham Moises",
           apellidos: "",
