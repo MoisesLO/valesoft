@@ -14,4 +14,7 @@ class Auth extends Controller
 		{
 			return $this->view('auth/login');
 		}
+		public  function apiRegistro(){
+  		return $this->viewApi('auth/register');
+		}
 }

@@ -195,7 +195,7 @@
       }
     },
     plugins: [createPersistedState()]
-  });
+  });``
 
   const {ref, onMounted, computed, reactive, watch, provide, inject} = Vue;
   const app = Vue.createApp({
@@ -212,10 +212,9 @@
       });
 
       function sendregister() {
-        axios.get('').then( res=> {
-
-        })
-        console.log('Envio de datos')
+        axios.get('/api/registro').then( res=> {
+            console.log(res.data)
+        });
       }
 
       return {register, sendregister}
