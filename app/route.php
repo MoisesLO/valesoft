@@ -1,6 +1,6 @@
 <?php
 
-$app->router->get('/', 'Home@index');
+$app->router->get('/', 'HomeController@index');
   
 $app->router->get('/about', function () {
     require './views/about.php';

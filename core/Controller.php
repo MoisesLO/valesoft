@@ -18,6 +18,10 @@
 			require './views/layout/api/api_header.php';
 			include './api/' . $view . '.php';
 		}
+
+		public function webView($view){
+			include './api/' .$view. '.php';
+		}
 		
 		
 	}
