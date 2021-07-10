@@ -34,12 +34,12 @@
               type="text"
               v-model="register.nombres"
               class="
-                mt-0.5 px-4 py-2
-                w-full
-                transition duration-300
-                border border-gray-300 rounded
-                focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200
-                "/>
+              mt-0.5 px-4 py-2
+              w-full
+              transition duration-300
+              border border-gray-300 rounded
+              focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200
+              "/>
           </div>
           <div class="flex-grow mt-3 md:mt-0 md:ml-2">
             <label class="text-sm font-semibold text-gray-500">Apellidos</label>
@@ -76,24 +76,26 @@
         <div class="flex flex-col mt-3 md:flex-row">
           <div class="flex-grow md:mr-2">
             <label class="text-sm font-semibold text-gray-500">Contrasena</label>
-            <input type="password"
-                   v-model="register.password"
-                   class="
-                   mt-0.5 px-4 py-2
-                   w-full
-                   transition duration-300
-                   border border-gray-300
-                   rounded
-                   focus:border-transparent
-                   focus:outline-none
-                   focus:ring-4 focus:ring-blue-200
-                   "/>
+            <input
+              type="password"
+              v-model="register.password"
+              class="
+              mt-0.5 px-4 py-2
+              w-full
+              transition duration-300
+              border border-gray-300
+              rounded
+              focus:border-transparent
+              focus:outline-none
+              focus:ring-4 focus:ring-blue-200
+             "/>
           </div>
           <div class="flex-grow mt-3 md:mt-0 md:ml-2">
             <label class="text-sm font-semibold text-gray-500">Re Contrasena</label>
-            <input type="password"
-                   v-model="register.repassword"
-                   class="
+            <input
+              type="password"
+              v-model="register.repassword"
+              class="
               mt-0.5 px-4 py-2
               w-full
               border border-gray-300
@@ -109,9 +111,10 @@
         <div class="flex flex-col mt-3 md:flex-row">
           <div class="md:w-44 md:mr-2">
             <label class="text-sm font-semibold text-gray-500">Ruc Empresa</label>
-            <input type="text"
-                   v-model="register.empresa_ruc"
-                   class="
+            <input
+              type="text"
+              v-model="register.empresa_ruc"
+              class="
               mt-0.5 px-4 py-2
               w-full
               transition duration-300
@@ -209,7 +212,10 @@
       });
 
       function sendregister() {
-        return true;
+        axios.get('').then( res=> {
+
+        })
+        console.log('Envio de datos')
       }
 
       return {register, sendregister}
