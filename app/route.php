@@ -7,7 +7,7 @@ $app->router->get('/about', function () {
     return 'About Page';
 });
 
-$app->router->get('/api/registro', 'Auth@apiRegistro');
+$app->router->get('/api/registro', 'Auth@apiregistro');
 $app->router->get('/registro', 'Auth@index');
 $app->router->get('/login', 'Auth@login');
 
