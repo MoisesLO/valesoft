@@ -14,7 +14,7 @@ class Controller
 
     }
 
-    public function viewapi($view)
+    public function viewApi($view)
     {
         require './views/layout/api/api_header.php';
         include './api/' . $view . '.php';
