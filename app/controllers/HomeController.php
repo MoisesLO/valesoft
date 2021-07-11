@@ -8,7 +8,7 @@ use Core\Controller;
 class HomeController extends Controller{
 
     public function index(){
-        return $this->view('web/index');
+        return $this->viewWeb('web/index');
     }
 
 }

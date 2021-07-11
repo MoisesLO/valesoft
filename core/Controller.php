@@ -19,8 +19,11 @@
 			include './api/' . $view . '.php';
 		}
 
-		public function webView($view){
-			include './api/' .$view. '.php';
+		public function viewWeb($view)
+		{
+			require './views/layout/web/header.php';
+			include './views/' .$view. '.php';
+			require './views/layout/web/footer.php';
 		}
 		
 		
