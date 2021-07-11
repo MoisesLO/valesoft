@@ -152,9 +152,10 @@
 
         <!-- 6 Button Registrar -->
         <div class="mt-5">
-          <button type="submit"
-                  @click="sendregister"
-                  class="w-full px-4 py-2 text-lg font-semibold text-white bg-blue-500 rounded-md ">
+          <button
+            type="submit"
+            @click="sendregister"
+            class="w-full px-4 py-2 text-lg font-semibold text-white bg-blue-500 rounded-md ">
             Registrarse
           </button>
         </div>
@@ -168,24 +169,21 @@
 <script>
   const store = new Vuex.Store({
     state: {
+      status: "",
       user: {
-        nombres: "Abraham Moises",
-        apellidos: "Linares Oscco",
-        correo: "elnaufrago2009@gmail.com",
-        status: "no conectado"
+        nombres: "",
+        apellidos: "",
+        correo: "",
       },
       empresa: {
         ruc: "",
         razon: "",
         direccion: ""
-      },
-      nombres: "Abraham Moises cambiando",
-      apellidos: "",
-      count: 1
+      }
     },
     mutations: {
-      increment(state) {
-        state.count++;
+      setRegister(state, user) {
+        state.user = user;
       },
       setName(state) {
         state.user.nombres = "Abraham Moises Cambiado";
@@ -195,7 +193,8 @@
       }
     },
     plugins: [createPersistedState()]
-  });``
+  });
+  ``
 
   const {ref, onMounted, computed, reactive, watch, provide, inject} = Vue;
   const app = Vue.createApp({
@@ -211,13 +210,21 @@
         empresa_direccion: "CM 40 LT 15 MZ 213 Ciudad Nueva"
       });
 
+      const nombres = computed(() => {
+        return store.state.user.nombres;
+      })
+
       function sendregister() {
-        axios.get('/api/registro').then( res=> {
-            console.log(res.data)
+        axios.get('/api/registro').then(res => {
+          if (res.data.status == "ok"){
+            store.commit("setRegister", res.data.user)
+            window.location.href = "/dashboard";
+          }
+          console.log(res.data)
         });
       }
 
-      return {register, sendregister}
+      return {register, sendregister, nombres}
       // const nombres = computed(()=> {
       //     return store.state.user.nombres;
       // });

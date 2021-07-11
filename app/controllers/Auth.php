@@ -11,10 +11,11 @@ class Auth extends Controller
         return $this->view('auth/register');
     }
     public function login()
-		{
-			return $this->view('auth/login');
-		}
-		public  function apiRegistro(){
-  		return $this->viewApi('auth/register');
-		}
+    {
+        return $this->view('auth/login');
+    }
+    public  function apiRegistro()
+    {
+        return $this->viewApi('auth/register');
+    }
 }
