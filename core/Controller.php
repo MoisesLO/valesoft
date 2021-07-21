@@ -16,7 +16,7 @@
 		
 		public function viewApi($view){
 			require './views/layout/api/api_header.php';
-			include './api/' . $view . '.php';
+			include './views/' . $view . '.php';
 		}
 
 		public function viewWeb($view)

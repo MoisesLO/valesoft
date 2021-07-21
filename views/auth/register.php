@@ -24,7 +24,7 @@
       </div>
 
       <!-- Lado derecho con ancho total, previo flex padre -->
-      <div class="flex-col flex-grow p-5 bg-white md:flex-row">
+      <div class="flex-col flex-grow p-5 bg-white md:flex-row" x-data="data()">
 
         <!-- 1 Nombre y Apellidos -->
         <div class="flex flex-col md:flex-row">
@@ -32,7 +32,7 @@
             <label class="text-sm font-semibold text-gray-500">Nombres</label>
             <input
               type="text"
-              v-model="register.nombres"
+              x-model="registro.nombres"
               class="
               mt-0.5 px-4 py-2
               w-full
@@ -45,7 +45,7 @@
             <label class="text-sm font-semibold text-gray-500">Apellidos</label>
             <input
               type="text"
-              v-model="register.apellidos"
+              x-model="registro.apellidos"
               class="
                 mt-0.5 px-4 py-2
                 w-full
@@ -61,7 +61,7 @@
           <label class="text-sm font-semibold text-gray-500">Correo</label>
           <input
             type="email"
-            v-model="register.correo"
+            x-model="registro.correo"
             class="
               mt-0.5 px-4 py-2
               text-gray-600
@@ -78,7 +78,7 @@
             <label class="text-sm font-semibold text-gray-500">Contrasena</label>
             <input
               type="password"
-              v-model="register.password"
+              x-model="registro.password"
               class="
               mt-0.5 px-4 py-2
               w-full
@@ -94,7 +94,7 @@
             <label class="text-sm font-semibold text-gray-500">Re Contrasena</label>
             <input
               type="password"
-              v-model="register.repassword"
+              x-model="registro.repassword"
               class="
               mt-0.5 px-4 py-2
               w-full
@@ -113,7 +113,7 @@
             <label class="text-sm font-semibold text-gray-500">Ruc Empresa</label>
             <input
               type="text"
-              v-model="register.empresa_ruc"
+              x-model="registro.empresa_ruc"
               class="
               mt-0.5 px-4 py-2
               w-full
@@ -127,9 +127,10 @@
           </div>
           <div class="flex-grow mt-3 md:mt-0 md:ml-2">
             <label class="text-sm font-semibold text-gray-500">Razon Empresa</label>
-            <input type="text"
-                   v-model="register.empresa_razon"
-                   class="
+            <input
+              type="text"
+              x-model="registro.empresa_razon"
+              class="
               mt-0.5 px-4 py-2
               w-full
               border border-gray-300
@@ -146,7 +147,7 @@
         <div class="flex flex-col mt-3">
           <label class="pb-1 text-sm font-semibold text-gray-500">Direccion Empresa</label>
           <input type="text"
-                 v-model="register.empresa_direccion"
+                 x-model="registro.empresa_direccion"
                  class="w-full px-4 py-2 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200">
         </div>
 
@@ -154,7 +155,7 @@
         <div class="mt-5">
           <button
             type="submit"
-            @click="sendregister"
+            @click="envio()"
             class="w-full px-4 py-2 text-lg font-semibold text-white bg-blue-500 rounded-md ">
             Registrarse
           </button>
@@ -166,80 +167,25 @@
     </div>
   </div>
 </div>
-<script>
-  const store = new Vuex.Store({
-    state: {
-      status: "",
-      user: {
-        nombres: "",
-        apellidos: "",
-        correo: "",
-      },
-      empresa: {
-        ruc: "",
-        razon: "",
-        direccion: ""
-      }
-    },
-    mutations: {
-      setRegister(state, user) {
-        state.user = user;
-      },
-      setName(state) {
-        state.user.nombres = "Abraham Moises Cambiado";
-      },
-      restName(state) {
-        state.user.nombres = "Abraham Moises";
-      }
-    },
-    plugins: [createPersistedState()]
-  });
-  ``
 
-  const {ref, onMounted, computed, reactive, watch, provide, inject} = Vue;
-  const app = Vue.createApp({
-    setup() {
-      const register = ref({
+<script type="application/javascript">
+  function data() {
+    return {
+      registro: {
         nombres: "Abraham Moises",
-        apellidos: "Linares Ossco",
+        apellidos: "Linares Oscco",
         correo: "elnaufrago2009@gmail.com",
         password: "moiseslinar3s",
         repassword: "moiseslinar3s",
         empresa_ruc: "10425162531",
-        empresa_razon: "SURMOTRIS S.R.L",
+        empresa_razon: "SURMOTRIZ S.R.L.",
         empresa_direccion: "CM 40 LT 15 MZ 213 Ciudad Nueva"
-      });
-
-      const nombres = computed(() => {
-        return store.state.user.nombres;
-      })
-
-      function sendregister() {
-        axios.get('/api/registro').then(res => {
-          if (res.data.status == "ok"){
-            store.commit("setRegister", res.data.user)
-            window.location.href = "/dashboard";
-          }
-          console.log(res.data)
+      },
+      envio () {
+        axios.post('/api_registro', { registro: this.registro }).then(res => {
+          console.log(res.data);
         });
       }
-
-      return {register, sendregister, nombres}
-      // const nombres = computed(()=> {
-      //     return store.state.user.nombres;
-      // });
-      // const apellidos = store.state.user.apellidos;
-      // function setName() {
-      //   store.commit("setName");
-      // }
-      // function restName() {
-      //   store.commit("restName")
-      // }
-      // return { nombres, apellidos, setName, restName };
     }
-  });
-  app.use(store);
-  app.mount("#app");
+  }
 </script>
-
-

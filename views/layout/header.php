@@ -9,14 +9,8 @@
   <!-- Tailwind Css -->
   <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 
-  <!-- Vue -->
-  <script src="https://unpkg.com/vue@next"></script>
-
-  <!-- Vuex  -->
-  <script src="https://unpkg.com/vuex@4.0.0-beta.4/dist/vuex.global.js"></script>
-
-  <!-- Persistance Vuex -->
-  <script src="https://unpkg.com/vuex-persistedstate/dist/vuex-persistedstate.umd.js"></script>
+  <!-- Alpine js -->
+  <script src="//unpkg.com/alpinejs" defer></script>
 
   <!-- Axios -->
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>

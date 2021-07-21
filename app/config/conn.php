@@ -3,9 +3,9 @@
 
 // conexion
 $conn = new mysqli(
-    'serverless-lineysoft.cluster-caeiyn2btsoe.us-east-1.rds.amazonaws.com',
-    'moises',
-    'moiseslinar3s',
+    'localhost',
+    'root',
+    '',
     'lineysoft',
 		3306);
 
