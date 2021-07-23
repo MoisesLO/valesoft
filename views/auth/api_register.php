@@ -3,6 +3,25 @@
 $data = json_decode(file_get_contents("php://input"), true);
 $data = $data['registro'];
 
+
+// SQL
+$insert = "insert into usuarios (
+                      nombres,
+                      apellidos,
+                      correo,
+                      password
+                      ) values (
+                      '{$data['nombres']}',
+                      '{$data['apellidos']}',  
+                      '{$data['correo']}',  
+                      '{$data['password']}'                        
+                      )";
+if ($conn->query($insert)) {
+  echo "ok";
+} else {
+  echo "no";
+}
+
 //$response = [
 //  "status" => "ok",
 //  "user" => [
@@ -21,7 +40,7 @@ $data = $data['registro'];
 //  ]
 //];
 
-echo json_encode($data);
+//echo json_encode($data);
 
 
 ?>

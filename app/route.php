@@ -13,6 +13,9 @@ $app->router->get('/registro', 'Auth@index');
 $app->router->post('/api_registro', 'Auth@apiRegistro');
 $app->router->get('/login', 'Auth@login');
 
+// Dashboard
+$app->router->get('/dashboard','DashboardController@index');
+
 //$app->router->get('/register', function () {
 //    require './views/auth/register.php';
 //});

@@ -6,7 +6,7 @@ $conn = new mysqli(
     'localhost',
     'root',
     '',
-    'lineysoft',
+    'valesoft',
 		3306);
 
 if ($conn->connect_error) {
