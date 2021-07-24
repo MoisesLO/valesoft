@@ -62,7 +62,22 @@
         flex flex-col flex-grow
         mt-3
         ">
-        <label></label>
+        <label class="
+          text-sm font-semibold text-gray-500
+          ">
+          Correo
+        </label>
+        <input type="text" class="
+          mt-0.5 px-4 py-2
+          text-gray-600
+          w-full
+          border border-gray-300
+          rounded
+          focus:border-transparent
+          focus:outline-none
+          focus:ring-4
+          focus:ring-blue-200
+          ">
 
       </div>
 
