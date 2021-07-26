@@ -52,10 +52,7 @@
     <!-- End Izquierdo -->
 
     <!-- Derecho Start -->
-    <div class="
-      flex-col md:flex-row flex-grow
-      p-5
-      bg-white">
+    <div class="flex-col md:flex-row flex-grow p-5 bg-white" x-data="data()">
 
       <!-- Title -->
       <h3 class="my-4 text-2xl font-semibold text-gray-700">Entrar a tu Cuenta</h3>
@@ -68,7 +65,7 @@
           text-sm font-semibold text-gray-500">
           Correo o Email :
         </label>
-        <input type="text" class="
+        <input type="text" x-model="login.correo" class="
           mt-0.5 px-4 py-2
           text-gray-600
           w-full
@@ -84,7 +81,7 @@
       <!-- Password -->
       <div class="flex flex-col flex-grow mt-5">
         <label for="password" class="text-sm font-semibold text-gray-500">Contrasenia : </label>
-        <input type="password" class="
+        <input type="password" x-model="login.password" class="
           mt-0.5 px-4 py-2
           text-gray-600
           border border-gray300
@@ -99,7 +96,8 @@
 
       <!-- Recordarme en equipo -->
       <div class="flex items-center space-x-2 mt-4">
-        <input type="checkbox" id="recordarme" class="w-4 h-4 rounded focus:ring-2 focus:ring-offset-0 focus:outline-none focus:ring-blue-200">
+        <input type="checkbox" id="recordarme"
+               class="w-4 h-4 rounded focus:ring-2 focus:ring-offset-0 focus:outline-none focus:ring-blue-200">
         <label for="recordarme" class="text-sm font-semibold text-gray-500">Recordarme en este equipo</label>
       </div>
 
@@ -116,3 +114,19 @@
   </div>
 
 </div>
+
+<script type="application/javascript">
+  function data() {
+    return {
+      login: {
+        correo: "elnaufrago2009@gmail.com",
+        password: "moiseslinar3s"
+      },
+      sendLogin() {
+        axios.post('/api_login').then(res => {
+          console.log(res.data)
+        })
+      }
+    }
+  }
+</script>

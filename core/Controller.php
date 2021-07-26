@@ -26,6 +26,17 @@
 			include './views/' .$view. '.php';
 			require './views/layout/web/footer.php';
 		}
+
+		public function viewApiPost($view){
+		  //CORS
+		  require './app/config/cors.php';
+
+		  // GET DATA FORM
+      require './app/config/getDataForm.php';
+
+      // VIEW RENDER
+      require './views/' .$view. '.php';
+    }
 		
 		
 	}
