@@ -53,19 +53,20 @@
 
     <!-- Derecho Start -->
     <div class="
-      flex flex-col md:flex-row flex-grow
+      flex-col md:flex-row flex-grow
       p-5
-      bg-white
-      ">
+      bg-white">
+
+      <!-- Title -->
+      <h3 class="my-4 text-2xl font-semibold text-gray-700">Entrar a tu Cuenta</h3>
+
       <!-- Correo -->
       <div class="
         flex flex-col flex-grow
-        mt-3
-        ">
+        mt-3">
         <label class="
-          text-sm font-semibold text-gray-500
-          ">
-          Correo
+          text-sm font-semibold text-gray-500">
+          Correo o Email :
         </label>
         <input type="text" class="
           mt-0.5 px-4 py-2
@@ -73,12 +74,41 @@
           w-full
           border border-gray-300
           rounded
+          bg-gray-50
+          focus:border-transparent
+          focus:outline-none
+          focus:ring-4
+          focus:ring-blue-200">
+      </div>
+
+      <!-- Password -->
+      <div class="flex flex-col flex-grow mt-5">
+        <label for="password" class="text-sm font-semibold text-gray-500">Contrasenia : </label>
+        <input type="password" class="
+          mt-0.5 px-4 py-2
+          text-gray-600
+          border border-gray300
+          rounded
+          bg-gray-50
           focus:border-transparent
           focus:outline-none
           focus:ring-4
           focus:ring-blue-200
-          ">
+          w-full">
+      </div>
 
+      <!-- Recordarme en equipo -->
+      <div class="flex items-center space-x-2 mt-4">
+        <input type="checkbox" id="recordarme" class="w-4 h-4 rounded focus:ring-2 focus:ring-offset-0 focus:outline-none focus:ring-blue-200">
+        <label for="recordarme" class="text-sm font-semibold text-gray-500">Recordarme en este equipo</label>
+      </div>
+
+      <!-- Entrar -->
+      <div class="flex text-center mt-6">
+        <a href="#" class="w-full px-4 py-2 text-lg font-semibold text-white bg-blue-500 rounded-md shadow hover:bg-blue-600
+        transition-color duration-300 focus:outline-none focus:ring-blue-200 focus:ring-4">
+          Entrar al sistema
+        </a>
       </div>
 
     </div>
