@@ -18,7 +18,7 @@ class Auth extends Controller
 
   public function apiRegistro()
   {
-    return $this->viewApi('auth/api_register');
+    return $this->viewApiPost('auth/api_register');
   }
 
   public function apiLogin(){
