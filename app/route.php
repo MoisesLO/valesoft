@@ -11,7 +11,7 @@ $app->router->get('/about', function () {
 $app->router->get('/api/registro', 'Auth@apiRegistro');
 $app->router->get('/registro', 'Auth@index');
 $app->router->post('/api_registro', 'Auth@apiRegistro');
-$app->router->get('/login', 'Auth@login');
+$app->router->get('/login', 'Auth@login',['before' => 'CheckAuth']);
 $app->router->post('/api_login', 'Auth@apiLogin');
 
 // Dashboard

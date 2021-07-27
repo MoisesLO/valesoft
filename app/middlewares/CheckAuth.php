@@ -5,10 +5,8 @@ namespace App\Middlewares;
 class CheckAuth {
 
     public function handle(){
-
-        return false;
-
+        echo "moises";
+        return true;
     }
-
 
 }
