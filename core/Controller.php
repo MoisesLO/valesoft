@@ -28,6 +28,9 @@
 		}
 
 		public function viewApiPost($view){
+		  // BD
+      require './app/config/conn.php';
+
 		  //CORS
 		  require './app/config/cors.php';
 

@@ -103,7 +103,7 @@
 
       <!-- Entrar -->
       <div class="flex text-center mt-6">
-        <a href="#" class="w-full px-4 py-2 text-lg font-semibold text-white bg-blue-500 rounded-md shadow hover:bg-blue-600
+        <a href="#" @click="sendLogin()" class="w-full px-4 py-2 text-lg font-semibold text-white bg-blue-500 rounded-md shadow hover:bg-blue-600
         transition-color duration-300 focus:outline-none focus:ring-blue-200 focus:ring-4">
           Entrar al sistema
         </a>
@@ -123,8 +123,10 @@
         password: "moiseslinar3s"
       },
       sendLogin() {
-        axios.post('/api_login').then(res => {
-          console.log(res.data)
+        axios.post('/api_login', {login: this.login}).then(res => {
+          if (res.data == 'ok'){
+            window.location.href = "/dashboard";
+          }
         })
       }
     }

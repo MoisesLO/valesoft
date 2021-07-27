@@ -22,7 +22,7 @@ class Auth extends Controller
   }
 
   public function apiLogin(){
-    return $this->viewApi('auth/api_login');
+    return $this->viewApiPost('auth/api_login');
   }
 
 }
