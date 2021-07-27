@@ -184,7 +184,7 @@
       envio () {
         axios.post('/api_registro', { registro: this.registro }).then(res => {
           if (res.data == "ok"){
-            //window.location.href = "/dashboard";
+            window.location.href = "/dashboard";
           }else {
 
           }

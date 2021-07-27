@@ -8,7 +8,7 @@ $password = $data['login']['password'];
 // Query
 $sql = "select * from usuarios where correo = '{$correo}' and password = '{$password}'";
 $chek = $conn->query($sql);
-$chek = $chek->fetch_array(MYSQLI_ASSOC);
+$chek = $chek->fetch_assoc(MYSQLI_ASSOC);
 
 // Check
 if ($correo === $chek['correo'] && $password === $chek['password']){

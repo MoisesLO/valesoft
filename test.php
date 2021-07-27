@@ -2,10 +2,13 @@
 
 require "./app/config/conn.php";
 
-$query = "SELECT count (*) as cantidad from usuarios where correo = 'elnaufrago2009@gmail.com' and password = 'moiseslinar3s'";
-$query = $conn->query($query);
-$query = $query->fetch_array(MYSQLI_ASYNC);
+$query = $conn->query("SELECT COUNT(*) as cantidad from usuarios");
+$query = $query->fetch_assoc();
 
 print_r($query);
+
+//$result = $mysqli->query("SELECT COUNT(*) AS cityCount FROM myCity")
+//$row = $result->fetch_assoc();
+//echo $row['cityCount']." rows in table myCity.";
 
 ?>
