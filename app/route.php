@@ -9,13 +9,13 @@ $app->router->get('/about', function () {
 
 // Auth
 $app->router->get('/api/registro', 'Auth@apiRegistro');
-$app->router->get('/registro', 'Auth@index');
+$app->router->get('/registro', 'Auth@index', ['before' => 'CheckLoginRegister']);
 $app->router->post('/api_registro', 'Auth@apiRegistro');
-$app->router->get('/login', 'Auth@login',['before' => 'CheckAuth']);
+$app->router->get('/login', 'Auth@login', ['before' => 'CheckLoginRegister']);
 $app->router->post('/api_login', 'Auth@apiLogin');
 
 // Dashboard
-$app->router->get('/dashboard','DashboardController@index');
+$app->router->get('/dashboard','DashboardController@index', ['before' => 'CheckAuth']);
 
 //$app->router->get('/register', function () {
 //    require './views/auth/register.php';

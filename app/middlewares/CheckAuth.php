@@ -2,10 +2,19 @@
 
 namespace App\Middlewares;
 
-class CheckAuth {
+class CheckAuth
+{
 
-    public function handle(){
-        return true;
+  public function handle()
+  {
+    session_start();
+
+    if (!isset($_SESSION['id'])) {
+      header('Location: login');
+      exit;
+    } else {
+      return true;
     }
+  }
 
 }
