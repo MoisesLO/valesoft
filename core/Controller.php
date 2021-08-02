@@ -40,6 +40,15 @@
       // VIEW RENDER
       require './views/' .$view. '.php';
     }
+
+    public function viewDashboard($view){
+		  // Header
+      require './views/layout/dashboard/header.php';
+      // VIEW RENDER
+      require './views/' .$view. '.php';
+      // Footer
+      require './views/layout/dashboard/footer.php';
+    }
 		
 		
 	}

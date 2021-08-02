@@ -124,7 +124,8 @@
       },
       sendLogin() {
         axios.post('/api_login', {login: this.login}).then(res => {
-          if (res.data == 'ok'){
+          console.log(res.data);
+          if (res.data == 'ok') {
             window.location.href = "/dashboard";
           }
         })
