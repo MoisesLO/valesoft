@@ -5,11 +5,11 @@
   <div class="flex flex-col flex-grow
     md:mt-20 m-3
     lg:max-w-screen-md">
-    <!-- Boleta Factura -->
+    <!-- Boton Boleta Factura -->
     <div class="">
       <a href="#" class="bg-gray-200
         rounded-md
-        text-gray-700 text-sm text-semibold
+        text-gray-700 text-sm font-semibold
         hover:bg-gray-300
         p-3">
         <i class="fas fa-file-invoice-dollar"></i>
@@ -17,7 +17,7 @@
       <a href="#" class="bg-gray-200
         rounded-md
         hover:bg-gray-300
-        text-gray-700 text-sm text-semibold
+        text-gray-700 text-sm font-semibold
         p-3">
         <i class="fas fa-file-invoice-dollar"></i>
         N. Credito Debito</a>
@@ -26,8 +26,8 @@
     <!-- Border  -->
     <div class="flex flex-grow
       rounded-md shadow-lg overflow-hidden
-      mt-5 p-5 bg-white">
-      hola mundo
+      mt-8 p-5 bg-white">
+      hola mundoo
     </div>
   </div>
 </div>

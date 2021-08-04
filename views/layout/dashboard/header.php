@@ -9,7 +9,7 @@
   <!-- FontAwesome -->
   <link rel="stylesheet" href="./assets/css/fontawesome/css/all.css">
   <!-- Tailwind Css -->
-  <link href="./assets/css/tailwind.min.css" rel="stylesheet">
+  <link href="./assets/css/tailwind/tailwind.css" rel="stylesheet">
 
   <!-- Alpine js -->
   <script src="./assets/js/alpine.min.js" defer></script>

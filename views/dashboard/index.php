@@ -26,7 +26,7 @@
     <!-- Border  -->
     <div class="flex flex-grow
       rounded-md shadow-lg overflow-hidden
-      mt-5 p-5 bg-white">
+      mt-6 p-5 bg-white">
       hola mundo
     </div>
   </div>
