@@ -41,21 +41,21 @@
 
     <!-- Border  -->
     <div class=" overflow-hidden shadow-lg rounded-md
-      mt-3 p-5 bg-white">
+      mt-2 p-5 bg-white">
 
       <!-- Primera Fila -->
       <div class="flex flex-col md:flex-row flex-grow">
 
-        <!-- w-1/5	width: 20%; -->
+        <!-- DNI w-1/5	width: 20%; -->
         <div class="md:w-1/5">
-          <div class="mr-2 mb-3">
+          <div class="md:mr-2 mb-3">
             <input type="text" class="w-full p-1 border rounded text-gray-700 text-sm" placeholder="DNI: 42516253">
           </div>
         </div>
 
         <!-- w-2/5	width: 40%; -->
         <div class="md:w-2/5">
-          <div class="mr-2 mb-3">
+          <div class="md:mr-2 mb-3">
             <input type="text" class="w-full p-1 border rounded text-gray-700 text-sm"
                    placeholder="Razon o Nombre: Abraham Moises Linares">
           </div>
@@ -84,16 +84,78 @@
 
       </div>
 
-      <!-- Tercera Fila -->
-      <!--
-        Producto
-        unidad
-        cantidad
-        precio sin igv
-        igv
-        precio con igv
-      -->
+      <!-- Items Responsive -->
+      <div class="flex flex-col md:flex-row flex-grow bg-gray-50 rounded">
 
+        <!-- Grupo de 5 -->
+        <div class="md:w-5/12 flex">
+          <!-- Productos -->
+          <div class="w-full md:mb-0">
+            <div class="md:mr-2">
+              <input type="text" class="w-full p-1 border rounded text-gray-700 text-sm bg-gray-100 hover:bg-white"
+                     placeholder="Quesillo Parmesano urbano  (gr)">
+            </div>
+          </div>
+        </div>
+
+        <!-- Grupo de 2 -->
+        <div class="md:w-2/12 flex mt-2 md:mt-0">
+
+          <!-- Cantidad -->
+          <div class="w-6/12">
+            <div class="">
+              <input type="text" class="w-full p-1 border rounded text-right font-semibold text-gray-700 text-sm bg-gray-100"
+                     placeholder="700">
+            </div>
+          </div>
+
+          <!-- Unidad -->
+          <div class="w-6/12">
+            <div class="ml-2">
+              <select name="" id="" class="p-1 border rounded-md w-full
+                text-gray-600 font-semibold text-sm
+                bg-gray-100">
+                <option value="">gr</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Grupo de tres -->
+        <div class="md:w-5/12 flex mt-2 md:mt-0">
+          <!-- Precio Compra -->
+          <div class="w-2/5">
+            <div class="md:ml-2 mr-2">
+              <input type="text" class="w-full p-1 border rounded text-right text-gray-700 text-sm bg-gray-100"
+                     placeholder="5000.00">
+            </div>
+          </div>
+
+          <!-- Precio Igv -->
+          <div class="w-1/5">
+            <div class="">
+              <input type="text" class="w-full p-1 border rounded text-right text-gray-700 text-sm bg-gray-200"
+                     disabled placeholder="500.12">
+            </div>
+          </div>
+
+          <!-- Precio Total -->
+          <div class="w-2/5">
+            <div class="ml-2">
+              <input type="text" class="w-full p-1 border rounded text-right text-gray-700 text-sm bg-gray-200"
+                     disabled placeholder="6500.00">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--
+        Producto  5
+        unidad  1
+        cantidad 1
+        precio sin igv 2
+        igv 1
+        precio con igv 2
+      -->
 
 
     </div>
