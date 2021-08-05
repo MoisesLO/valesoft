@@ -76,7 +76,7 @@
         <!-- w-1/6	width: 16.666667%; -->
         <div class="md:w-1/6">
           <div class="mb-3">
-            <button class="text-sm font-semibold bg-gray-200 px-2 py-1 w-full rounded">
+            <button class="text-sm text-gray-500 font-semibold bg-gray-200 px-2 py-1 w-full rounded">
               <i class="fas fa-plus"></i> Items
             </button>
           </div>
@@ -113,7 +113,7 @@
           <div class="w-6/12">
             <div class="ml-2">
               <select name="" id="" class="p-1 border rounded-md w-full
-                text-gray-600 font-semibold text-sm
+                text-gray-400 font-semibold text-sm
                 bg-gray-100">
                 <option value="">gr</option>
               </select>
