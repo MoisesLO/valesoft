@@ -48,14 +48,14 @@
 
         <!-- DNI w-1/5	width: 20%; -->
         <div class="md:w-1/5">
-          <div class="md:mr-2 mb-3">
+          <div class="md:mr-2 mb-1">
             <input type="text" class="w-full p-1 border rounded text-gray-700 text-sm" placeholder="DNI: 42516253">
           </div>
         </div>
 
         <!-- w-2/5	width: 40%; -->
         <div class="md:w-2/5">
-          <div class="md:mr-2 mb-3">
+          <div class="md:mr-2 mb-1">
             <input type="text" class="w-full p-1 border rounded text-gray-700 text-sm"
                    placeholder="Razon o Nombre: Abraham Moises Linares">
           </div>
@@ -63,7 +63,7 @@
 
         <!-- w-2/5	width: 40%; -->
         <div class="md:w-2/5">
-          <div class="mb-3">
+          <div class="mb-0">
             <input type="text" class="w-full p-1 border rounded text-gray-700 text-sm"
                    placeholder="Direccion: Cm 40 Lt 15 Mz 213 Ciudad Nueva">
           </div>
@@ -71,11 +71,11 @@
       </div>
 
       <!-- Segunda Fila -->
-      <div class="flex flex-col md:flex-row flex-grow justify-end">
+      <div class="flex flex-col md:flex-row flex-grow justify-end md:mb-1">
 
         <!-- w-1/6	width: 16.666667%; -->
-        <div class="md:w-1/6">
-          <div class="mb-3">
+        <div class="md:w-1/6 mt-3 md:mt-0">
+          <div class="md:ml-2">
             <button class="text-sm text-gray-500 font-semibold bg-gray-200 px-2 py-1 w-full rounded">
               <i class="fas fa-plus"></i> Items
             </button>
@@ -84,27 +84,37 @@
 
       </div>
 
+
+      <!--
+        Producto  5
+        unidad  1
+        cantidad 1
+        precio sin igv 2
+        igv 1
+        precio con igv 2
+      -->
       <!-- Items Responsive -->
-      <div class="flex flex-col md:flex-row flex-grow bg-gray-50 rounded">
+      <div class="flex flex-col md:flex-row flex-grow bg-gray-50 rounded mt-3 md:mt-0">
 
         <!-- Grupo de 5 -->
         <div class="md:w-5/12 flex">
           <!-- Productos -->
           <div class="w-full md:mb-0">
             <div class="md:mr-2">
-              <input type="text" class="w-full p-1 border rounded text-gray-700 text-sm bg-gray-100 hover:bg-white"
+              <input type="text" class="w-full p-1 border rounded text-gray-700 text-sm bg-gray-50 hover:bg-white"
                      placeholder="Quesillo Parmesano urbano  (gr)">
             </div>
           </div>
         </div>
 
         <!-- Grupo de 2 -->
-        <div class="md:w-2/12 flex mt-2 md:mt-0">
+        <div class="md:w-2/12 flex mt-1 md:mt-0">
 
           <!-- Cantidad -->
           <div class="w-6/12">
             <div class="">
-              <input type="text" class="w-full p-1 border rounded text-right font-semibold text-gray-700 text-sm bg-gray-100"
+              <input type="text" class="w-full p-1 border rounded text-right font-semibold text-gray-700
+                hover:bg-white text-sm bg-gray-50"
                      placeholder="700">
             </div>
           </div>
@@ -114,7 +124,7 @@
             <div class="ml-2">
               <select name="" id="" class="p-1 border rounded-md w-full
                 text-gray-400 font-semibold text-sm
-                bg-gray-100">
+                bg-gray-50">
                 <option value="">gr</option>
               </select>
             </div>
@@ -122,11 +132,12 @@
         </div>
 
         <!-- Grupo de tres -->
-        <div class="md:w-5/12 flex mt-2 md:mt-0">
+        <div class="md:w-5/12 flex mt-1 md:mt-0">
           <!-- Precio Compra -->
           <div class="w-2/5">
             <div class="md:ml-2 mr-2">
-              <input type="text" class="w-full p-1 border rounded text-right text-gray-700 text-sm bg-gray-100"
+              <input type="text" class="w-full p-1 border rounded text-right
+                hover:bg-white text-gray-700 text-sm bg-gray-50"
                      placeholder="5000.00">
             </div>
           </div>
@@ -134,7 +145,7 @@
           <!-- Precio Igv -->
           <div class="w-1/5">
             <div class="">
-              <input type="text" class="w-full p-1 border rounded text-right text-gray-700 text-sm bg-gray-200"
+              <input type="text" class="w-full p-1 border rounded text-right text-gray-700 text-sm bg-gray-50"
                      disabled placeholder="500.12">
             </div>
           </div>
@@ -142,21 +153,70 @@
           <!-- Precio Total -->
           <div class="w-2/5">
             <div class="ml-2">
-              <input type="text" class="w-full p-1 border rounded text-right text-gray-700 text-sm bg-gray-200"
+              <input type="text" class="w-full p-1 border rounded text-right text-gray-700 text-sm bg-gray-50"
                      disabled placeholder="6500.00">
             </div>
           </div>
         </div>
       </div>
-      <!--
-        Producto  5
-        unidad  1
-        cantidad 1
-        precio sin igv 2
-        igv 1
-        precio con igv 2
-      -->
 
+
+      <!-- Totales -->
+      <div>
+        <!-- Operaciones Gravadas -->
+        <div class="flex justify-end items-center mt-1 md:mt-0">
+          <div>
+            <span class="text-sm font-semibold text-gray-400">Op. Gravadas</span>
+          </div>
+          <div class="w-2/5 md:w-2/12 ">
+            <div class="ml-2">
+              <input type="text" class="w-full p-1 border rounded text-right
+              text-gray-700 text-sm bg-gray-100" disabled placeholder="6500.00">
+            </div>
+          </div>
+        </div>
+
+        <!-- IGV -->
+        <div class="flex justify-end items-center mt-1 md:mt-0">
+          <div>
+            <span class="text-sm font-semibold text-gray-400">I.G.V</span>
+          </div>
+          <div class="w-2/5 md:w-2/12 ">
+            <div class="ml-2">
+              <input type="text" class="w-full p-1 border rounded text-right
+              text-gray-700 text-sm bg-gray-100" disabled placeholder="6500.00">
+            </div>
+          </div>
+        </div>
+
+        <!-- Total -->
+        <div class="flex justify-end items-center mt-1 md:mt-0">
+          <div>
+            <span class="text-sm font-bold text-gray-500">Total</span>
+          </div>
+          <div class="w-2/5 md:w-2/12 ">
+            <div class="ml-2">
+              <input type="text" class="w-full p-1 border rounded text-right
+              text-gray-900 font-bold text-sm bg-gray-100" disabled placeholder="6500.00">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-center md:justify-end mt-6">
+        <!-- Cacelar -->
+        <div class="mr-2">
+          <button class="px-3 p-2 bg-gray-600 rounded-md text-gray-200 font-semibold text-sm">
+            <i class="fa fa-backspace"></i> Cancelar
+          </button>
+        </div>
+        <!-- Enviar Documento -->
+        <div>
+          <button class="px-3 p-2 bg-indigo-600 rounded-md text-gray-100 font-semibold text-sm">
+            <i class="fa fa-cloud-upload-alt"></i> Enviar Documento
+          </button>
+        </div>
+      </div>
 
     </div>
   </div>
